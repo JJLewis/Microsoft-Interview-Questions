@@ -1,0 +1,88 @@
+Transfer into struct
+
+WHILE (Sum - Max > 0)
+	Collapse pos and negs -> making new array, remembering range
+	Chop ends
+	Find Sum 
+	Find Max
+	If (Sum - Max < 0) BREAK
+
+	Collapse with pairing algo making new array 
+	Chop ends
+	Find Sum 
+	Find Max
+ENDWHILE
+i = Max's startRange
+j = Max's endRange
+Largest Sum = Max->value
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2
+Sort A(n)
+Make new array
+FOREACH n in A
+	IF n < 0 
+		FOR 0 to n -1
+			add -1 to new array
+	ELSEIF n > 0
+		FOR 0 to n -1
+			add 1 to new array
+	ENDIF
+
+WHILE (start + end = 0) {
+	Delete start and end
+}
+
+SUM remaining
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++
+3
+
+Sort array A (nlogn)
+Sort array B
+indexA = 0;
+indexB = 0;
+WHILE (A(indexA) != B(indexB))	
+	let a = at indexA	
+	let b = val at indexB
+	IF (a > b)
+		indexB++
+	ELSEIF (b > a)
+		indexA++
+	ELSE
+		return match
+	ENDIF
+ENDWHILE
+
+2n(logn + 1) 
+O(nlogn)
+
+4 +++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Have pointer A
+Have Pointer B
+
+DO 
+	IF pointerA->NULL: BREAK
+	Advance pointerA;
+	IF pointerB->NULL : BREAK
+	advance pointerB
+	IF pointerB->NULL : BREAK
+	advance pointerB
+
+	IF pointerA == pointerB: return TRUE
+
+END DO(pointerA != pointerB)
+
+Return FALSE
+
+5 ++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+indexes = Make array of 99
+for n in source array
+	if indexes[n] == true
+		return n is the duplicate
+	indexes[n] = true
+end for
